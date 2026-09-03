@@ -39,5 +39,23 @@
   |  |  * Core Tables: Products, Orders, Users, Inventories                      |  |
   |  |  * Vector Store: product_embeddings 表 Map Type: vector(1536)              |  |
   |  |  * Performance Index Struct: HNSW (Hierarchical Navigable Small World)    |  |
+
+
+
+
+
+
+
+
+
+
+
+
+  [1. THE REAL-TIME USER DISCOVERY LOOP]
+User Intent String ──► WebAPI Controller ──► Azure OpenAI ──► 1536-dim Vector ──► pgvector HNSW Query ──► Client JSON
+
+[2. THE BACKGROUND CATALOG SYNC LOOP]
+Catalog DB Write ──► Azure Service Bus Event ──► Worker Process ──► Azure OpenAI ──► pgvector INSERT/UPDATE Upsert
+
   |  +---------------------------------------------------------------------------+  |
   +---------------------------------------------------------------------------------+
