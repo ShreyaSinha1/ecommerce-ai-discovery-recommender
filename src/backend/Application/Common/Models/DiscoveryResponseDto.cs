@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-/// <summary>
-/// Summary description for Product
-/// </summary>
-public class Product
-{
-    public Product()
-    {
-        //
-        // TODO: Add constructor logic here
-        //
-    }
-}
+namespace Application.Common.Models;
+
+public record DiscoveryResponseDto(
+    Guid Id,
+    string Name,
+    string Description,
+    string SKU,
+    decimal Price,
+    string Category,
+    double SimilarityScore)

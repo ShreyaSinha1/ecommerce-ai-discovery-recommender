@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿
+using System.Threading.Tasks;
+using System.Threading;
 
-/// <summary>
-/// Summary description for Product
-/// </summary>
-public class Product
+public interface IOpenAiEmbeddingService
 {
-    public Product()
-    {
-        //
-        // TODO: Add constructor logic here
-        //
-    }
+    Task<float[]> GenerateEmbeddingAsync(string text, CancellationToken cancellationToken);
 }
