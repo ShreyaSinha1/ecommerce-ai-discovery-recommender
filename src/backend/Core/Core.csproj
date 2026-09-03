@@ -1,1 +1,19 @@
-﻿
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Targets the latest .NET 9 LTS/STS runtime baseline -->
+    <TargetFramework>net9.0</TargetFramework>
+
+
+    <!-- Enforces strict compiler rules requiring explicit null validation patterns -->
+    <Nullable>enable</Nullable>
+
+    <!-- Enables modern C# features like primary constructors and collection expressions -->
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Strict Domain Separation: Zero External NuGet Package References Allowed Here -->
+    <AssemblyName>EcommerceRecommender.Core</AssemblyName>
+    <RootNamespace>Domain</RootNamespace>
+  </PropertyGroup>
+
+</Project>

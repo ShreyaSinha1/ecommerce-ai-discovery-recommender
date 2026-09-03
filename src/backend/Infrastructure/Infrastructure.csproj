@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <!-- Targets the latest .NET 9 infrastructure runtime baseline -->
+        <TargetFramework>net9.0</TargetFramework>
+
+        <!-- Enforces strict compiler rules requiring explicit null validation patterns -->
+        <Nullable>enable</Nullable>
+
+        <!-- Enables modern C# features like primary constructors and collection expressions -->
+        <ImplicitUsings>enable</ImplicitUsings>
+
+        <AssemblyName>EcommerceRecommender.Infrastructure</AssemblyName>
+        <RootNamespace>Infrastructure</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Relational Data Access & Vector Extensions via EF Core 9 -->
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.0" />
+        <PackageReference Include="Pgvector" Version="0.3.0" />
+        <PackageReference Include="Pgvector.EntityFrameworkCore" Version="0.2.1" />
+
+        <!-- Cognitive AI & Resiliency Cloud SDK Adapters -->
+        <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.17" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.0" />
+        <PackageReference Include="Polly" Version="8.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- Clean Architecture Core Domain References -->
+        <ProjectReference Include="..\1.Core\Core.csproj" />
+        <ProjectReference Include="..\2.Application\Application.csproj" />
+    </ItemGroup>
+
+</Project>

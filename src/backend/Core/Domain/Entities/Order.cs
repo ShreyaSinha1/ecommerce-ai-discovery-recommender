@@ -1,17 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-/// <summary>
-/// Summary description for Order
-/// </summary>
+namespace Domain.Entities;
+
 public class Order
 {
-    public Order()
+    public Guid Id { get; private set; }
+    public Guid UserId { get; private set; }
+    public Guid ProductId { get; private set; }
+    public int Quantity { get; private set; }
+    public DateTime PurchasedAt { get; private set; }
+
+    private Order() { }
+
+    public Order(Guid id, Guid userId, Guid productId, int quantity)
     {
-        //
-        // TODO: Add constructor logic here
-        //
+        Id = id;
+        UserId = userId;
+        ProductId = productId;
+        Quantity = quantity;
+        PurchasedAt = DateTime.UtcNow;
     }
 }

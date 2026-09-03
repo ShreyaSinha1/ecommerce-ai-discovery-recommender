@@ -1,17 +1,23 @@
-﻿using System;
+﻿using Application.Common.Interfaces;
+using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Reflection.Emit;
 
-/// <summary>
-/// Summary description for Order
-/// </summary>
-public class Order
+namespace Infrastructure.Persistence;
+
+public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
-    public Order()
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+    public DbSet<Product> Products => Set<Product>();
+    public DbSet<ProductEmbedding> ProductEmbeddings => Set<ProductEmbedding>();
+    public DbSet<Order> Orders => Set<Order>();
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        //
-        // TODO: Add constructor logic here
-        //
+        // Load configurations cleanly
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+        base.OnModelCreating(modelBuilder);
     }
 }
