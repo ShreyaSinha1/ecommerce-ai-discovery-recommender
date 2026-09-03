@@ -24,6 +24,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "backend", ".", "{BC7B13E8-6
 		SlnRelativePath = "..\backend\"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "frontend", "..\frontend\", "{8A3AF94E-6D58-F9E9-3B30-A89F5F93011C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51270"
+		Debug.AspNetCompiler.PhysicalPath = "..\frontend\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51270\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51270"
+		Release.AspNetCompiler.PhysicalPath = "..\frontend\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51270\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51270"
+		SlnRelativePath = "..\frontend\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +52,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BC7B13E8-64E1-435E-A98F-0189E0CFCC52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC7B13E8-64E1-435E-A98F-0189E0CFCC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A3AF94E-6D58-F9E9-3B30-A89F5F93011C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A3AF94E-6D58-F9E9-3B30-A89F5F93011C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
